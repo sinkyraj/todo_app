@@ -25,7 +25,7 @@ return(
         <Input 
         type="text" 
         name="text" 
-        placeholder='Take out trash' 
+        // placeholder='Take out trash' 
         value={text}
         onChange={handleInputChange}
 
@@ -33,6 +33,7 @@ return(
         />
 
       </FormGroup>
+      <br/>
       <FormGroup>
         <Button color ='primary' onClick={handleAddItem}>Add Item</Button>
 

@@ -2,28 +2,39 @@ import { useContext } from 'react'
 
 import { 
   ListGroup, 
-  ListGroupItem 
+  ListGroupItem, Button
 } from 'reactstrap';
 
 import ItemContext from '../../Utils/ItemContext'
+// import Item from '../../Utils/ItemAPI'
 
 const List = () => {
   const { items } = useContext(ItemContext)
+
+  
+  // const deleteItem = (id) => {
+  //   Item.delete(id)
+  //     .then(() => {
+  //       window.location.reload()
+  //     })
+  //     .catch(err => {
+  //       console.error(err)
+        
+  //     })
+  // }
+
 return(
   <>
-  {/* <h1>This is List</h1> */}
+  
     <ListGroup>
       {
 
         items.map(item=> <ListGroupItem key = {item._id}>{item.text}</ListGroupItem>)
       }
 
-      {/* <ListGroupItem disabled tag="a" href="#">Take out Trash</ListGroupItem>
-      <ListGroupItem tag="a" href="#">Cook dinner</ListGroupItem>
-      <ListGroupItem tag="a" href="#">Do Laundry</ListGroupItem>
-      <ListGroupItem tag="a" href="#">Walk dog</ListGroupItem> */}
-      
-    </ListGroup>
+     </ListGroup>
+    <br/>
+    {/* <Button color='primary' onClick={() => deleteItem()}>Delete</Button> */}
   </>
 
 )
